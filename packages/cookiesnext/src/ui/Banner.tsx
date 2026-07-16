@@ -1,6 +1,7 @@
 'use client'
 
 import { useCookiesNextContext } from '../context.js'
+import { CookieIcon } from './icons.js'
 
 export function Banner() {
   const { showBanner, config, texts, acceptAll, rejectAll, openSettings } =
@@ -16,9 +17,14 @@ export function Banner() {
       aria-labelledby="cn-banner-title"
       aria-describedby="cn-banner-desc"
     >
-      <p className="cn-title" id="cn-banner-title">
-        {texts.banner.title}
-      </p>
+      <div className="cn-banner-head">
+        <span className="cn-icon-tile" aria-hidden="true">
+          <CookieIcon size={16} />
+        </span>
+        <p className="cn-title" id="cn-banner-title">
+          {texts.banner.title}
+        </p>
+      </div>
       <p className="cn-text" id="cn-banner-desc">
         {texts.banner.description}
       </p>

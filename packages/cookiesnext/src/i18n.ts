@@ -23,6 +23,7 @@ export interface ResolvedTexts {
     privacyPolicy: string
     imprint: string
     serviceCount: string
+    serviceCountOne: string
     close: string
   }
   placeholder: {
@@ -62,6 +63,7 @@ const de: ResolvedTexts = {
     privacyPolicy: 'Datenschutzerklärung',
     imprint: 'Impressum',
     serviceCount: '{count} Dienste',
+    serviceCountOne: '1 Dienst',
     close: 'Schließen',
   },
   placeholder: {
@@ -120,6 +122,7 @@ const en: ResolvedTexts = {
     privacyPolicy: 'Privacy policy',
     imprint: 'Imprint',
     serviceCount: '{count} services',
+    serviceCountOne: '1 service',
     close: 'Close',
   },
   placeholder: {

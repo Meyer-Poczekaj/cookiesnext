@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { useCookiesNextContext } from '../context.js'
 import { formatText, resolveText } from '../i18n.js'
 import { CATEGORY_IDS, type CategoryId, type ResolvedService } from '../types.js'
-import { ChevronIcon, CloseIcon } from './icons.js'
+import { ChevronIcon, CloseIcon, CookieIcon } from './icons.js'
 
 function Switch({
   checked,
@@ -123,7 +123,16 @@ function CategoryBlock({
     <section className="cn-category">
       <div className="cn-category-head">
         <div className="cn-category-info">
-          <p className="cn-category-name">{texts.categories[category].name}</p>
+          <p className="cn-category-name">
+            {texts.categories[category].name}
+            {services.length > 0 && (
+              <span className="cn-badge">
+                {services.length === 1
+                  ? texts.modal.serviceCountOne
+                  : formatText(texts.modal.serviceCount, { count: services.length })}
+              </span>
+            )}
+          </p>
           <p className="cn-category-desc">{texts.categories[category].description}</p>
         </div>
         {essential ? (
@@ -147,9 +156,6 @@ function CategoryBlock({
           >
             <ChevronIcon open={expanded} />
             {expanded ? texts.modal.hideDetails : texts.modal.showDetails}
-            <span className="cn-count">
-              {formatText(texts.modal.serviceCount, { count: services.length })}
-            </span>
           </button>
           {expanded && (
             <div className="cn-services">
@@ -253,9 +259,14 @@ export function Modal() {
         tabIndex={-1}
       >
         <div className="cn-modal-head">
-          <p className="cn-title" id="cn-modal-title">
-            {texts.modal.title}
-          </p>
+          <div className="cn-modal-title-row">
+            <span className="cn-icon-tile" aria-hidden="true">
+              <CookieIcon size={17} />
+            </span>
+            <p className="cn-title" id="cn-modal-title">
+              {texts.modal.title}
+            </p>
+          </div>
           <button
             type="button"
             className="cn-icon-btn"
@@ -290,7 +301,7 @@ export function Modal() {
           )}
         </div>
         <div className="cn-modal-foot">
-          <button type="button" className="cn-btn cn-btn-secondary" onClick={rejectAll}>
+          <button type="button" className="cn-btn cn-btn-ghost" onClick={rejectAll}>
             {texts.modal.rejectAll}
           </button>
           <button

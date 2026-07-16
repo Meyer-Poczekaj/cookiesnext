@@ -71,6 +71,7 @@ export interface ModalTexts {
   privacyPolicy?: string
   imprint?: string
   serviceCount?: string
+  serviceCountOne?: string
   close?: string
 }
 
