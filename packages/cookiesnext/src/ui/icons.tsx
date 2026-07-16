@@ -15,10 +15,9 @@ export function CookieIcon(props: { size?: number }) {
       aria-hidden="true"
     >
       <path d="M21 12a9 9 0 1 1-9.5-8.98 3.5 3.5 0 0 0 4.24 4.24A3.5 3.5 0 0 0 21 12Z" />
-      <circle cx="8.5" cy="10" r="0.6" fill="currentColor" />
-      <circle cx="12" cy="15.5" r="0.6" fill="currentColor" />
-      <circle cx="15.5" cy="11.5" r="0.6" fill="currentColor" />
-      <circle cx="9.5" cy="14.5" r="0.6" fill="currentColor" />
+      <circle cx="9.3" cy="11" r="0.8" fill="currentColor" stroke="none" />
+      <circle cx="14.6" cy="11" r="0.8" fill="currentColor" stroke="none" />
+      <path d="M9.2 14.2c.8 1.2 1.8 1.8 2.8 1.8s2-.6 2.8-1.8" />
     </svg>
   )
 }

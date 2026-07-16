@@ -250,6 +250,12 @@ Das Default-Theme hängt komplett an CSS-Variablen — global überschreiben:
   --cn-success: #047857;      /* „Immer aktiv"-Badge */
   --cn-success-bg: #ecfdf5;
   --cn-ph-bg: #f8fafc;        /* Platzhalter-Hintergrund */
+
+  /* Schwebendes Widget (Defaults: --cn-bg / --cn-fg / --cn-border) */
+  --cn-widget-bg: #ffffff;    /* Widget-Hintergrund */
+  --cn-widget-fg: #111827;    /* Icon-Farbe */
+  --cn-widget-border: #e5e7eb;
+  --cn-widget-shadow: 0 4px 16px rgba(15, 23, 42, 0.16);
 }
 ```
 
@@ -579,6 +585,12 @@ The default theme is driven entirely by CSS variables — override globally:
   --cn-success: #047857;      /* "always active" badge */
   --cn-success-bg: #ecfdf5;
   --cn-ph-bg: #f8fafc;        /* placeholder background */
+
+  /* Floating widget (defaults: --cn-bg / --cn-fg / --cn-border) */
+  --cn-widget-bg: #ffffff;    /* widget background */
+  --cn-widget-fg: #111827;    /* icon color */
+  --cn-widget-border: #e5e7eb;
+  --cn-widget-shadow: 0 4px 16px rgba(15, 23, 42, 0.16);
 }
 ```
 

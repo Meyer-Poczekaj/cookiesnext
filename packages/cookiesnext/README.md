@@ -147,6 +147,12 @@ The default theme is driven by CSS variables — override them globally:
   --cn-font: inherit;
   --cn-overlay: rgba(15, 23, 42, 0.45);
   --cn-z: 2147483000;
+
+  /* Floating widget (defaults: --cn-bg / --cn-fg / --cn-border) */
+  --cn-widget-bg: #ffffff;
+  --cn-widget-fg: #111827;
+  --cn-widget-border: #e5e7eb;
+  --cn-widget-shadow: 0 4px 16px rgba(15, 23, 42, 0.16);
 }
 ```
 

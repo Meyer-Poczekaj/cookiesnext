@@ -1,6 +1,6 @@
 {
   "name": "@meyerpoczekaj/cookiesnext",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "GDPR-friendly cookie consent for Next.js — auto-blocks third-party scripts and iframes until the visitor consents. Built-in service catalog, themeable widget, i18n.",
   "keywords": [
     "nextjs",
