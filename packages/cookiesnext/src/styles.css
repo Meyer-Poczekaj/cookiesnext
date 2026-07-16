@@ -93,7 +93,7 @@
 .cn-icon-tile {
   width: 30px;
   height: 30px;
-  border-radius: 9px;
+  border-radius: 50%;
   display: inline-grid;
   place-items: center;
   flex-shrink: 0;
@@ -342,14 +342,16 @@
 }
 
 .cn-badge {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.015em;
+  font-size: 12px;
+  font-weight: 450;
   color: var(--_cn-muted);
-  background: var(--_cn-muted-bg);
-  border: 1px solid var(--_cn-border);
-  border-radius: 999px;
-  padding: 1px 8px;
+}
+
+.cn-badge::before {
+  content: '·';
+  margin-right: 8px;
+  color: var(--_cn-border);
+  font-weight: 700;
 }
 
 .cn-category-desc {
@@ -359,27 +361,23 @@
   max-width: 52ch;
 }
 
-.cn-always-active {
+.cn-locked {
   flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 0.015em;
-  color: var(--cn-success, #067647);
-  background: var(--cn-success-bg, #eefbf4);
-  border: 1px solid var(--cn-success-border, #d3f1e0);
-  border-radius: 999px;
-  padding: 3px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1px;
 }
 
-.cn-always-active::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: currentColor;
+.cn-locked .cn-switch {
+  cursor: default;
+}
+
+.cn-locked-label {
+  font-size: 10.5px;
+  font-weight: 550;
+  letter-spacing: 0.02em;
+  color: var(--_cn-muted);
 }
 
 .cn-details-toggle {
@@ -519,6 +517,10 @@
 .cn-switch-disabled {
   cursor: default;
   opacity: 0.55;
+}
+
+.cn-locked .cn-switch-disabled {
+  opacity: 0.75;
 }
 
 /* ---------- widget ---------- */

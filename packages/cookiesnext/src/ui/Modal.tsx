@@ -136,7 +136,10 @@ function CategoryBlock({
           <p className="cn-category-desc">{texts.categories[category].description}</p>
         </div>
         {essential ? (
-          <span className="cn-always-active">{texts.modal.alwaysActive}</span>
+          <div className="cn-locked" title={texts.modal.alwaysActive}>
+            <Switch checked disabled label={texts.modal.alwaysActive} />
+            <span className="cn-locked-label">{texts.modal.alwaysActive}</span>
+          </div>
         ) : (
           <Switch
             checked={services.length > 0 && allOn}

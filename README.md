@@ -247,8 +247,6 @@ Das Default-Theme hängt komplett an CSS-Variablen — global überschreiben:
   --cn-overlay: rgba(15, 23, 42, 0.45);  /* Modal-Overlay */
   --cn-z: 2147483000;         /* z-index */
   --cn-switch-off: #d1d5db;   /* Schalter aus */
-  --cn-success: #047857;      /* „Immer aktiv"-Badge */
-  --cn-success-bg: #ecfdf5;
   --cn-ph-bg: #f8fafc;        /* Platzhalter-Hintergrund */
 
   /* Schwebendes Widget (Defaults: --cn-bg / --cn-fg / --cn-border) */
@@ -582,8 +580,6 @@ The default theme is driven entirely by CSS variables — override globally:
   --cn-overlay: rgba(15, 23, 42, 0.45);
   --cn-z: 2147483000;
   --cn-switch-off: #d1d5db;
-  --cn-success: #047857;      /* "always active" badge */
-  --cn-success-bg: #ecfdf5;
   --cn-ph-bg: #f8fafc;        /* placeholder background */
 
   /* Floating widget (defaults: --cn-bg / --cn-fg / --cn-border) */
