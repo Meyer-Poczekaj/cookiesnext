@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
-import { CookiesNext } from 'next-cookie-consent'
-import 'next-cookie-consent/styles.css'
+import { CookiesNext } from '@meyerpoczekaj/cookiesnext'
+import '@meyerpoczekaj/cookiesnext/styles.css'
 import './globals.css'
 import consentConfig from '@/cookies.config'
 

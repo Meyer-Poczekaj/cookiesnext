@@ -2,7 +2,7 @@
 
 **Deutsch** · [English](#english)
 
-> 📦 Auf npm veröffentlicht als **[`next-cookie-consent`](https://www.npmjs.com/package/next-cookie-consent)** · Published on npm as **`next-cookie-consent`**
+> 📦 Auf npm veröffentlicht als **[`@meyerpoczekaj/cookiesnext`](https://www.npmjs.com/package/@meyerpoczekaj/cookiesnext)** · Published on npm as **`@meyerpoczekaj/cookiesnext`**
 
 DSGVO-freundliches Cookie-Consent für **Next.js (App Router)** — mit automatischem Blocker, der Third-Party-Scripts und iFrames abfängt, *bevor* sie laden. Erst wenn der Besucher einwilligt, wird der Inhalt nachgeladen — ganz ohne Wrapper-Komponenten um jede Einbettung.
 
@@ -32,7 +32,7 @@ DSGVO-freundliches Cookie-Consent für **Next.js (App Router)** — mit automati
 ## Installation
 
 ```bash
-npm install next-cookie-consent
+npm install @meyerpoczekaj/cookiesnext
 ```
 
 Voraussetzungen: Next.js 13+ mit App Router, React 18.2+.
@@ -42,7 +42,7 @@ Voraussetzungen: Next.js 13+ mit App Router, React 18.2+.
 **1. `cookies.config.ts` im Projekt-Root anlegen:**
 
 ```ts
-import { defineConsentConfig } from 'next-cookie-consent'
+import { defineConsentConfig } from '@meyerpoczekaj/cookiesnext'
 
 export default defineConsentConfig({
   version: 1,
@@ -60,8 +60,8 @@ export default defineConsentConfig({
 **2. App in `app/layout.tsx` wrappen:**
 
 ```tsx
-import { CookiesNext } from 'next-cookie-consent'
-import 'next-cookie-consent/styles.css'
+import { CookiesNext } from '@meyerpoczekaj/cookiesnext'
+import '@meyerpoczekaj/cookiesnext/styles.css'
 import consentConfig from '@/cookies.config'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -108,7 +108,7 @@ Für **garantiert null Requests** bei Scripts:
 
 ```tsx
 // Variante A: React-Komponente (empfohlen für Analytics/Pixel)
-import { ConsentScript } from 'next-cookie-consent'
+import { ConsentScript } from '@meyerpoczekaj/cookiesnext'
 
 <ConsentScript service="google-analytics" src="https://www.googletagmanager.com/gtag/js?id=G-XXXX" async />
 <ConsentScript service="google-analytics">{`
@@ -299,7 +299,7 @@ Namen/Beschreibungen eigener Dienste akzeptieren Strings oder `{ de: '…', en: 
 
 ```tsx
 'use client'
-import { useConsent, ConsentGate } from 'next-cookie-consent'
+import { useConsent, ConsentGate } from '@meyerpoczekaj/cookiesnext'
 
 function MyComponent() {
   const {
@@ -361,7 +361,7 @@ GDPR-friendly cookie consent for **Next.js (App Router)** — with an automatic 
 ## Installation
 
 ```bash
-npm install next-cookie-consent
+npm install @meyerpoczekaj/cookiesnext
 ```
 
 Requires Next.js 13+ (App Router) and React 18.2+.
@@ -371,7 +371,7 @@ Requires Next.js 13+ (App Router) and React 18.2+.
 **1. Create `cookies.config.ts` in your project root:**
 
 ```ts
-import { defineConsentConfig } from 'next-cookie-consent'
+import { defineConsentConfig } from '@meyerpoczekaj/cookiesnext'
 
 export default defineConsentConfig({
   version: 1,
@@ -389,8 +389,8 @@ export default defineConsentConfig({
 **2. Wrap your app in `app/layout.tsx`:**
 
 ```tsx
-import { CookiesNext } from 'next-cookie-consent'
-import 'next-cookie-consent/styles.css'
+import { CookiesNext } from '@meyerpoczekaj/cookiesnext'
+import '@meyerpoczekaj/cookiesnext/styles.css'
 import consentConfig from '@/cookies.config'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -437,7 +437,7 @@ For guaranteed **zero-request** script handling:
 
 ```tsx
 // Option A: React component (recommended for analytics/pixels)
-import { ConsentScript } from 'next-cookie-consent'
+import { ConsentScript } from '@meyerpoczekaj/cookiesnext'
 
 <ConsentScript service="google-analytics" src="https://www.googletagmanager.com/gtag/js?id=G-XXXX" async />
 <ConsentScript service="google-analytics">{`
@@ -628,7 +628,7 @@ Custom service names/descriptions accept plain strings or `{ de: '…', en: '…
 
 ```tsx
 'use client'
-import { useConsent, ConsentGate } from 'next-cookie-consent'
+import { useConsent, ConsentGate } from '@meyerpoczekaj/cookiesnext'
 
 function MyComponent() {
   const {

@@ -1,4 +1,4 @@
-# next-cookie-consent
+# cookiesnext
 
 GDPR-friendly cookie consent for **Next.js (App Router)** — with an automatic blocker that intercepts third-party scripts and iframes *before* they load, until the visitor consents.
 
@@ -12,7 +12,7 @@ GDPR-friendly cookie consent for **Next.js (App Router)** — with an automatic 
 ## Installation
 
 ```bash
-npm install next-cookie-consent
+npm install @meyerpoczekaj/cookiesnext
 ```
 
 Requires Next.js 13+ (App Router) and React 18.2+.
@@ -22,7 +22,7 @@ Requires Next.js 13+ (App Router) and React 18.2+.
 **1. Create `cookies.config.ts` in your project root:**
 
 ```ts
-import { defineConsentConfig } from 'next-cookie-consent'
+import { defineConsentConfig } from '@meyerpoczekaj/cookiesnext'
 
 export default defineConsentConfig({
   version: 1, // bump to re-ask all visitors
@@ -52,8 +52,8 @@ export default defineConsentConfig({
 **2. Wrap your app in `app/layout.tsx`:**
 
 ```tsx
-import { CookiesNext } from 'next-cookie-consent'
-import 'next-cookie-consent/styles.css'
+import { CookiesNext } from '@meyerpoczekaj/cookiesnext'
+import '@meyerpoczekaj/cookiesnext/styles.css'
 import consentConfig from '@/cookies.config'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -102,7 +102,7 @@ For strict **zero-request** script handling, use one of these instead of a plain
 
 ```tsx
 // Option A: React component (recommended for analytics/pixels)
-import { ConsentScript } from 'next-cookie-consent'
+import { ConsentScript } from '@meyerpoczekaj/cookiesnext'
 
 <ConsentScript service="google-analytics" src="https://www.googletagmanager.com/gtag/js?id=G-XXXX" async />
 <ConsentScript service="google-analytics">{`
@@ -156,7 +156,7 @@ All elements carry stable `cn-*` classes (`.cn-banner`, `.cn-modal`, `.cn-widget
 
 ```tsx
 'use client'
-import { useConsent, ConsentGate } from 'next-cookie-consent'
+import { useConsent, ConsentGate } from '@meyerpoczekaj/cookiesnext'
 
 function MyComponent() {
   const {
