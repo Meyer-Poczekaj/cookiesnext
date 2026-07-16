@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useConsent } from 'cookiesnext'
+import { useConsent } from 'next-cookie-consent'
 
 declare global {
   interface Window {

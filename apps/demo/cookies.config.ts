@@ -1,4 +1,4 @@
-import { defineConsentConfig } from 'cookiesnext'
+import { defineConsentConfig } from 'next-cookie-consent'
 
 export default defineConsentConfig({
   // Bei Änderungen an den Diensten hochzählen -> Besucher werden erneut gefragt.
