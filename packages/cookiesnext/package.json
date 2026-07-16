@@ -17,7 +17,7 @@
   "author": "Meyer & Poczekaj",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Meyer-Poczekaj/cookiesnext.git",
+    "url": "git+https://github.com/Meyer-Poczekaj/cookiesnext.git",
     "directory": "packages/cookiesnext"
   },
   "type": "module",
