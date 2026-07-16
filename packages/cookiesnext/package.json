@@ -1,0 +1,60 @@
+{
+  "name": "cookiesnext",
+  "version": "0.1.0",
+  "description": "GDPR-friendly cookie consent for Next.js — auto-blocks third-party scripts and iframes until the visitor consents. Built-in service catalog, themeable widget, i18n.",
+  "keywords": [
+    "nextjs",
+    "react",
+    "cookie",
+    "consent",
+    "gdpr",
+    "dsgvo",
+    "cookie-banner",
+    "consent-management",
+    "cmp"
+  ],
+  "license": "MIT",
+  "author": "Meyer & Poczekaj",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Meyer-Poczekaj/cookiesnext.git",
+    "directory": "packages/cookiesnext"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && node scripts/copy-assets.mjs",
+    "dev": "tsc -p tsconfig.build.json --watch",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  }
+}

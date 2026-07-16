@@ -1,0 +1,14 @@
+{
+  "name": "cookiesnext-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w cookiesnext",
+    "test": "npm run test -w cookiesnext",
+    "dev": "npm run build -w cookiesnext && npm run dev -w demo",
+    "build:demo": "npm run build -w cookiesnext && npm run build -w demo"
+  }
+}
